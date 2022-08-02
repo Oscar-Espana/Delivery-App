@@ -31,7 +31,7 @@ export default {
       title: 'Longitude of the Restaurant',
     },
     {
-      name: 'adress',
+      name: 'address',
       type: 'string',
       title: 'Restaurant address',
       validation: Rule => Rule.required(),
