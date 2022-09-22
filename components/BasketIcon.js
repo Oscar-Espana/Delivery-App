@@ -6,10 +6,14 @@ import {selectBasketItems, selectBasketTotal} from '../features/basketSlice';
 import Currency from 'react-currency-formatter';
 
 const BasketIcon = () => {
+  const navigation = useNavigation();
+
   const items = useSelector(selectBasketItems);
   const basketTotal = useSelector(selectBasketTotal);
 
-  const navigation = useNavigation();
+  if (items.length === 0) {
+    return null;
+  }
 
   return (
     <View className="absolute bottom-8 w-full z-50">
